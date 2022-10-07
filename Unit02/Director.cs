@@ -14,7 +14,7 @@ namespace Unit02.Game
         
         bool _isPlaying = true;
         int _score = 0;
-        int _totalScore = 75;
+        int _totalScore = 300;
         string guess;
         Card card = new Card();
         Card nextCard = new Card();
