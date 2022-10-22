@@ -8,7 +8,9 @@ namespace Unit03.Game
     /// </summary>
     public class Director
     {
-        
+        /// <summary>
+        /// Declares Class variables and class constructors.
+        /// </summary>
         private bool _isPlaying = true;
         private Word _word = new Word();
         private Jumper _jumper = new Jumper();
@@ -38,7 +40,7 @@ namespace Unit03.Game
         }
 
         /// <summary>
-        /// Moves the seeker to a new location.
+        /// Gets the guess variable from user.
         /// </summary>
         private void GetInputs()
         {
@@ -46,7 +48,8 @@ namespace Unit03.Game
         }
 
         /// <summary>
-        /// Keeps watch on where the seeker is moving.
+        /// Tests if the word contains the users guess and updates hint or jumper accordingly.
+        /// Checks for a game over.
         /// </summary>
         private void DoUpdates()
         {
@@ -70,7 +73,7 @@ namespace Unit03.Game
         }
 
         /// <summary>
-        /// Provides a hint for the seeker to use.
+        /// Displays hint and jumper.
         /// </summary>
         private void DoOutputs()
         {

@@ -50,6 +50,10 @@ namespace Unit03.Game
             Console.WriteLine(text);
         }
 
+        /// <summary>
+        /// Displays text without creating a new line.
+        /// </summary>
+        /// <param name="text"></param>
         public void WriteText(string text)
         {
             Console.Write(text);

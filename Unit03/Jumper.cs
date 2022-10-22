@@ -5,8 +5,17 @@ namespace Unit03.Game
 {
     public class Jumper
     {
+        /// <summary>
+        /// Class Variables being defined.
+        /// </summary>
+        /// <typeparam name="string"></typeparam>
+        /// <returns></returns>
         private List<string> _jumper = new List<string>();
         private TerminalService _terminalService = new TerminalService();
+        
+        /// <summary>
+        /// Jumper Constructor. Creates and displays jumper.
+        /// </summary>
         public Jumper()
         {
 
@@ -24,6 +33,9 @@ namespace Unit03.Game
             displayJumper();
         }
 
+        /// <summary>
+        /// Removes first index of jumper list and replaces head with x when game is over.
+        /// </summary>
         public void updateJumper()
         {
             if (_jumper[0] == "  0  ")
@@ -36,6 +48,10 @@ namespace Unit03.Game
             }
         }
 
+        /// <summary>
+        /// Checks for loss through the state of jumper index 0.
+        /// </summary>
+        /// <returns> true/false </returns>
         public bool checkLoss()
         {
             if (_jumper[0] == "  x  ")
@@ -48,6 +64,9 @@ namespace Unit03.Game
             }
         }
 
+        /// <summary>
+        /// Loops through jumper list and prints each line.
+        /// </summary>
         public void displayJumper()
         {
             _terminalService.WriteLine("");
